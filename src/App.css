@@ -1,0 +1,366 @@
+:root {
+  --yellow: #f5c32c;
+  --orange: #fca61f;
+  --black: #242d49;
+  --gray: #788097;
+  --blueCard: #ddf8fe;
+  --purple: rgb(238 210 255);
+  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+  --orangeCard: rgba(252, 166, 31, 0.45);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+}
+
+.button {
+  background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
+  box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
+  border-radius: 34px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 11px 26px 11px 26px;
+}
+
+.button:hover {
+  background: white;
+  cursor: pointer;
+  border: 1px solid var(--orange);
+  color: var(--orange);
+}
+
+@media screen and (max-width: 480px) {
+  .App {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.css-1wlk0hk-MuiAvatar-root {
+  width: 80px !important;
+  height: 80px !important;
+}
+.css-bq0q2v-JoyCircularProgress-root,
+.css-10d6a1f-JoyCircularProgress-root,
+.css-1bo59id-JoyCircularProgress-root {
+  --Icon-fontSize: calc(0.4 * var(--_root-size));
+  --CircularProgress-progressColor: var(
+    --variant-solidBg,
+    var(--joy-palette-primary-solidBg, var(--joy-palette-primary-500, #ffa500))
+  ) !important;
+  --_progress-thickness: var(
+    --CircularProgress-progressThickness,
+    var(--CircularProgress-thickness, 4px)
+  ) !important;
+  color: var(
+    --variant-softColor,
+    var(
+      --joy-palette-primary-softColor,
+      var(--joy-palette-primary-700, #ffa500)
+    )
+  ) !important;
+  font-weight: var(--joy-fontWeight-md, 600) !important;
+  font-size: calc(0.3 * var(--_root-size)) !important;
+}
+
+.MuiCircularProgress-colorPrimary {
+  --CircularProgress-progressColor: var(
+    --variant-solidBg,
+    var(--joy-palette-primary-solidBg, var(--joy-palette-primary-500, #ffa500))
+  ) !important;
+  --_progress-thickness: var(
+    --CircularProgress-progressThickness,
+    var(--CircularProgress-thickness, 4px)
+  ) !important;
+}
+
+/* 
+linear progress */
+
+.css-1aia4jm-JoyLinearProgress-root {
+  color: var(
+    --variant-outlinedColor,
+    var(
+      --joy-palette-neutral-outlinedColor,
+      var(--joy-palette-neutral-700, #ffa500)
+    )
+  ) !important;
+  border: none !important;
+  --LinearProgress-radius: 5px !important;
+  --LinearProgress-thickness: 10px !important;
+}
+
+.css-1aia4jm-JoyLinearProgress-root {
+  color: var(
+    --variant-outlinedColor,
+    var(
+      --joy-palette-neutral-outlinedColor,
+      var(--joy-palette-neutral-700, #ffa500)
+    )
+  ) !important;
+  --LinearProgress-radius: 5px !important;
+  --LinearProgress-thickness: 10px !important;
+}
+
+.css-18vheqr-JoyTypography-root {
+  color: var(
+    --joy-palette-text-tertiary,
+    var(--joy-palette-neutral-600, #ffa500)
+  ) !important;
+  font-weight: var(--joy-fontWeight-xl, 7600) !important;
+  color: var(--joy-palette-common-white, #f1f1f1) !important;
+  mix-blend-mode: difference;
+}
+
+.css-19kbjdd-JoyTypography-root {
+  font-weight: 600 !important;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.avatar-container {
+  flex: 0 0 auto;
+}
+
+.sidebar-scroll {
+  padding-top: 170px !important;
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+
+/* Optional: Improve the appearance of the scrollbar */
+.sidebar-scroll::-webkit-scrollbar {
+  width: 2px !important;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  min-width: 64px !important;
+  color: #ffa500 !important;
+}
+
+.css-y8lqg6 {
+  padding: 5px !important;
+}
+
+.css-ib93u7-MuiPaper-root-MuiAppBar-root {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter span {
+  font-family: monospace;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* works */
+
+.works {
+  padding: 0 1rem 0 3rem;
+  display: flex;
+  height: 90vh;
+  margin-top: 1rem;
+
+  /* scroll */
+  align-items: center;
+}
+/* left side */
+.awesome {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.awesome > :nth-child(1) {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.awesome > :nth-child(2) {
+  color: var(--orange);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.awesome > :nth-child(3) {
+  color: var(--gray);
+  font-size: 14px;
+  margin-top: 1rem;
+}
+.s-button {
+  width: 8rem;
+  height: 2rem;
+  margin-top: 4rem;
+}
+
+/* 
+services card */
+
+.css-h93ljk-MuiTypography-root {
+  font-weight: 700 !important;
+  font-size: 20px !important;
+  padding-bottom: 10px !important;
+}
+
+/* right side */
+.w-right {
+  position: relative;
+}
+
+.w-mainCircle {
+  left: 9rem;
+  position: relative;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 100%;
+  box-shadow: var(--smboxShadow);
+  top: 2rem;
+  background: white;
+  /* darkMode */
+  z-index: 2;
+}
+.w-mainCircle > * {
+  position: absolute;
+}
+.w-mainCircle > :nth-child(1) {
+  top: -3rem;
+  left: 6rem;
+}
+.w-mainCircle > :nth-child(2) {
+  left: -3rem;
+  top: 5rem;
+}
+.w-mainCircle > :nth-child(3) {
+  left: 6rem;
+  top: 5rem;
+}
+.w-mainCircle > :nth-child(4) {
+  left: 15rem;
+  top: 5rem;
+}
+.w-mainCircle > :nth-child(5) {
+  left: 6rem;
+  top: 13rem;
+}
+.w-secCircle {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  border-radius: 100%;
+  border: 5px solid #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: "none";
+  box-shadow: var(--smboxShadow);
+  background: white;
+}
+
+.w-secCircle > img {
+  transform: scale(0.6);
+}
+
+.w-backCircle {
+  position: absolute;
+  height: 13rem;
+  width: 13rem;
+  border-radius: 100%;
+  /* darkMode */
+  z-index: 1;
+}
+.blueCircle {
+  background: #1949b8;
+  left: 18rem;
+  top: 0rem;
+}
+.yellowCircle {
+  background: #f5c32c;
+  left: 18rem;
+  top: 8rem;
+}
+
+@media screen and (max-width: 480px) {
+  .works {
+    flex-direction: column;
+    height: 55rem;
+    padding: 0;
+    gap: 5rem;
+  }
+
+  .w-right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    transform: scale(0.7);
+  }
+  .w-mainCircle {
+    position: static;
+  }
+  .w-backCircle {
+    left: 8rem !important;
+  }
+}
+
+/* projects */
+
+.portfolio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+/* heading */
+.portfolio span:nth-of-type(1) {
+  color: var(--black);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.portfolio span:nth-of-type(2) {
+  color: var(--orange);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* slider */
+.portfolio .swiper {
+  overflow: visible !important;
+}
+
+.portfolio-slider {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.portfolio-slider .swiper-slide {
+  width: 20rem;
+}
+.portfolio img {
+  width: 19rem;
+  filter: drop-shadow(-12px 15px 13px rgba(0, 0, 0, 0.25));
+  border-radius: 19px;
+}
+
+.css-1r9jet7 {
+  -webkit-justify-content: flex-start !important;
+  justify-content: flex-start !important;
+}
+
+@media (max-width: 640px) {
+  .css-2dum1v-MuiDrawer-docked .MuiDrawer-paper {
+    display: none !important;
+  }
+}
