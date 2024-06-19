@@ -9,6 +9,10 @@ import Services from "./components/Services";
 import PricePlans from "./components/PricePlans";
 import Works from "./components/Works";
 import Projects from "./components/Projects";
+import Recomandation from "./components/Recomandation";
+import Education from "./components/Education";
+import Contact from "./components/Contact";
+import Blog from "./components/Blog";
 
 function App() {
   const theme = useContext(themeContext);
@@ -31,6 +35,10 @@ function App() {
         <PricePlans />
         <Works />
         <Projects />
+        <Recomandation />
+        <Education />
+        <Contact />
+        <Blog />
         <Footer />
       </div>
     </div>

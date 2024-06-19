@@ -18,6 +18,7 @@
   color: white;
   font-size: 16px;
   padding: 11px 26px 11px 26px;
+  font-weight: 700;
 }
 
 .button:hover {
@@ -127,6 +128,19 @@ linear progress */
   padding-top: 170px !important;
   flex: 1 1 auto;
   overflow-y: auto;
+}
+
+/* banner section */
+
+.css-hyum1k-MuiToolbar-root {
+  min-height: 0px !important;
+}
+
+.css-vt795u {
+  padding: 0px !important;
+}
+.css-6iz4mj-MuiButtonBase-root-MuiIconButton-root {
+  margin-right: -16px !important;
 }
 
 /* Optional: Improve the appearance of the scrollbar */
@@ -320,7 +334,6 @@ services card */
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
 }
 /* heading */
 .portfolio span:nth-of-type(1) {
@@ -363,4 +376,202 @@ services card */
   .css-2dum1v-MuiDrawer-docked .MuiDrawer-paper {
     display: none !important;
   }
+}
+
+/* recomandation */
+
+.t-wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.t-blur1 {
+  left: 5rem;
+  top: 16rem;
+}
+.t-blur2 {
+  top: 5rem;
+  left: 0;
+}
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem;
+  width: 30rem;
+  height: 12rem;
+  /* styles same as work.css */
+  background: rgba(255, 255, 255, 0.26);
+  border: 7px solid var(--blueCard);
+  box-shadow: var(--boxShadow);
+  border-radius: 20px;
+}
+.testimonial > img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+}
+.testimonial > span {
+  color: var(--gray);
+}
+
+.swiper-slide {
+  height: 60% !important;
+}
+
+/* slider */
+.t-wrapper .swiper {
+  width: 100%;
+  height: 45%;
+}
+
+.t-wrapper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.t-wrapper .swiper-pagination-bullet-active {
+  background: var(--orange);
+}
+
+@media screen and (max-width: 480px) {
+  .t-wrapper {
+    padding: 0;
+  }
+  .testimonial > img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+:where(.timeline > li) {
+  grid-template-columns: none !important;
+}
+
+.css-1vf1h1q-MuiPaper-root-MuiAppBar-root {
+  display: none !important;
+}
+
+.css-1g33kmd {
+  padding: 0px !important;
+}
+
+/* Add these styles to your CSS file */
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+body.light-mode {
+  background-color: #fff;
+  color: #000;
+}
+
+.theme-toggle .hidden {
+  display: none;
+}
+
+.theme-toggle .flex {
+  display: flex;
+}
+
+.contact-form {
+  padding: 0 3rem 0 3rem;
+  display: flex;
+  height: 80vh;
+  margin-top: 4rem;
+  /* scroll */
+  padding-top: 3rem;
+}
+
+.c-right {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex: 1;
+}
+
+.c-right > form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.c-right .user {
+  width: 20rem;
+  height: 2rem;
+  padding: 0.3em;
+  outline: none;
+  border: 2px solid var(--orange);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 4rem !important;
+}
+
+.c-blur1 {
+  top: 1rem;
+  left: 8rem;
+}
+
+@media screen and (max-width: 480px) {
+  .contact-form {
+    padding: 0;
+    flex-direction: column;
+    gap: 5rem;
+    height: 40rem;
+  }
+  .c-right .user {
+    width: 16rem;
+  }
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: "" !important;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  content: "" !important;
+}
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative !important;
+}
+
+.swiper-slide.swiper-slide-active {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(79 70 229 / var(--tw-border-opacity)) !important;
+}
+
+.swiper-slide.swiper-slide-active > .swiper-slide-active\:text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
+.swiper-slide.swiper-slide-active
+  > .flex
+  .grid
+  .swiper-slide-active\:text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
 }

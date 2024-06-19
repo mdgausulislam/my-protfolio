@@ -7,7 +7,7 @@ const typeWriterText = "I am a Mern Stack Developer.";
 
 function Banner() {
   return (
-    <div className="carousel w-full relative">
+    <div className="carousel w-full relative mt-10 lg:mt-0">
       {/* Image with gradient overlay */}
       <div
         className="relative w-full h-[300px] lg:h-[500px]"
@@ -26,7 +26,7 @@ function Banner() {
               Art Space!
             </h1>
             <p className="typewriter pt-2">
-              <span className="text-white text-xs lg:text-xl">
+              <span className="text-white text-xs lg:text-xl hidden lg:block">
                 <Typewriter
                   words={[typeWriterText]}
                   loop={5}

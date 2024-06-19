@@ -7,38 +7,25 @@ import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import { Link } from "react-router-dom";
-import ModeToggle from "./ModeToggle";
 import Sidebar from "./Sidebar";
 import Avatar from "./Avatar";
 import Drawer2 from "./Drawer2";
+import { CiMenuKebab } from "react-icons/ci";
+import { FaAngleLeft } from "react-icons/fa"; // Import the close icon
 
 const drawerWidth = 340;
-const drawer2Width = 65; // Width for Drawer2
+const drawer2Width = 240; // Updated width for Drawer2
 
 export default function Header({ window }) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [isClosing, setIsClosing] = React.useState(false);
   const [drawerOpen, setDrawerOpen] = React.useState(false); // State for controlling Drawer2
 
-  const handleDrawerClose = () => {
-    setIsClosing(true);
-    setMobileOpen(false);
-    setDrawerOpen(false); // Close Drawer2
-  };
-
-  const handleDrawerTransitionEnd = () => {
-    setIsClosing(false);
-  };
-
   const handleDrawerToggle = () => {
-    if (!isClosing) {
-      setMobileOpen(!mobileOpen);
-    }
+    setMobileOpen(!mobileOpen);
   };
 
   const handleContactClick = () => {
-    setDrawerOpen(true); // Open Drawer2 when Contact is clicked
+    setDrawerOpen(!drawerOpen); // Toggle Drawer2 when Contact is clicked
   };
 
   const drawer = (
@@ -66,53 +53,34 @@ export default function Header({ window }) {
             width: { sm: `calc(100% - ${drawer2Width}px)` }, // Only consider Drawer2 width on the right
             mr: { sm: `${drawer2Width}px` }, // Add margin-right for Drawer2
           }}
+          className="ml-10"
         >
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <div className="flex-1 flex items-center justify-end font-normal">
-              <div className="flex-10 hidden md:flex">
-                <ul className="flex gap-8 mr-16">
-                  <li className="hover:text-orange-500 cursor-pointer">
-                    <Link to="Navbar" spy="true" smooth="true">
-                      Home
-                    </Link>
-                  </li>
-                  <li className="hover:text-orange-500 cursor-pointer">
-                    <Link to="/services" spy="true" smooth="true">
-                      Services
-                    </Link>
-                  </li>
-                  <li className="hover:text-orange-500 cursor-pointer">
-                    <Link to="/experience" spy="true" smooth="true">
-                      Experience
-                    </Link>
-                  </li>
-                  <li className="hover:text-orange-500 cursor-pointer">
-                    <Link to="/portfolio" spy="true" smooth="true">
-                      Portfolio
-                    </Link>
-                  </li>
-                  <li className="hover:text-orange-500 cursor-pointer">
-                    <Link to="/testimonial" spy="true" smooth="true">
-                      Testimonial
-                    </Link>
-                  </li>
-                </ul>
+          <Toolbar className="flex justify-between">
+            <div className="flex">
+              <div>
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="start"
+                  onClick={handleDrawerToggle}
+                  sx={{ mr: 2, display: { sm: "none" } }}
+                >
+                  <MenuIcon />
+                </IconButton>
               </div>
-              <ModeToggle />
-              <Link to="" spy="true" smooth="true">
-                <button className="ml-4 button" onClick={handleContactClick}>
-                  Contact
-                </button>
-              </Link>
+            </div>
+            <div className="flex">
+              <div>
+                <IconButton
+                  color="inherit"
+                  aria-label="toggle drawer2"
+                  edge="start"
+                  onClick={handleContactClick} 
+                  sx={{ mr: 2 }}
+                >
+                  {drawerOpen ? <FaAngleLeft /> : <CiMenuKebab />}
+                </IconButton>
+              </div>
             </div>
           </Toolbar>
         </AppBar>
@@ -125,8 +93,7 @@ export default function Header({ window }) {
             container={container}
             variant="temporary"
             open={mobileOpen}
-            onTransitionEnd={handleDrawerTransitionEnd}
-            onClose={handleDrawerClose}
+            onClose={handleDrawerToggle}
             ModalProps={{
               keepMounted: true, // Better open performance on mobile.
             }}
@@ -166,7 +133,7 @@ export default function Header({ window }) {
           {/* Main content goes here */}
         </Box>
       </Box>
-      <Drawer2 open={drawerOpen} handleDrawerClose={handleDrawerClose} />
+      <Drawer2 open={drawerOpen} handleDrawerToggle={handleContactClick} />
     </div>
   );
 }

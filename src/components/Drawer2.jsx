@@ -5,9 +5,10 @@ import MuiDrawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import MenuIcon from "@mui/icons-material/Menu";
+import { FaAngleLeft } from "react-icons/fa";
+import { IoSunnyOutline } from "react-icons/io5";
+import { CiDark } from "react-icons/ci";
 
 const drawerWidth = 240;
 
@@ -58,39 +59,98 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-function Drawer2() {
-  const theme = useTheme();
-  const [open, setOpen] = useState(false);
+function Drawer2({ open, handleDrawerToggle }) {
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const handleDrawerClose = () => {
-    setOpen(false);
+  const handleToggle = () => {
+    setIsDarkMode(!isDarkMode);
+    // Toggle the body class for dark mode
+    document.body.classList.toggle("dark-mode", !isDarkMode);
   };
+
+  const theme = useTheme();
 
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <Drawer variant="permanent" open={open} anchor="right">
         <DrawerHeader>
-          <IconButton onClick={() => setOpen(!open)}>
-            {theme.direction === "rtl" ? (
-              <ChevronLeftIcon />
-            ) : (
-              <ChevronRightIcon />
-            )}
-          </IconButton>
+          {open ? (
+            <FaAngleLeft
+              className="cursor-pointer"
+              onClick={handleDrawerToggle}
+            />
+          ) : (
+            <MenuIcon className="cursor-pointer" onClick={handleDrawerToggle} />
+          )}
         </DrawerHeader>
         <Divider />
         <List>
-          <ul>
-            <li onClick={() => setOpen(true)}>Home</li>
+          <ul className="pl-8 text-sm space-y-2 pt-20 cursor-pointer">
+            {!open && (
+              <li className="text-bold text-center text-2xl transform rotate-90 mt-32">
+                Home
+              </li>
+            )}
             {open && (
               <>
-                <li>Protfolio</li>
-                <li>Education</li>
-                <li>Experience</li>
-                <li>Projects</li>
-                <li>Blog</li>
-                <li>Contact</li>
+                <div
+                  className={`theme-toggle ${isDarkMode ? "dark" : "light"}`}
+                >
+                  <label className="swap swap-rotate">
+                    {/* hidden checkbox controls the state */}
+                    <input
+                      type="checkbox"
+                      checked={isDarkMode}
+                      onChange={handleToggle}
+                      className="hidden"
+                    />
+
+                    {/* sun icon for light mode */}
+                    <div
+                      className={`swap-on flex gap-4 ${
+                        isDarkMode ? "hidden" : "flex"
+                      }`}
+                    >
+                      <label>Light Mode</label>
+                      <IoSunnyOutline className="fill-current w-10 h-10" />
+                    </div>
+
+                    {/* moon icon for dark mode */}
+                    <div
+                      className={`swap-off flex gap-4 ${
+                        isDarkMode ? "flex" : "hidden"
+                      }`}
+                    >
+                      <label>Dark Mode</label>
+                      <CiDark className="fill-current w-10 h-10" />
+                    </div>
+                  </label>
+                </div>
+                <li className="bg-orange-300 p-3 text-white rounded-lg hover:bg-orange-400 font-semibold">
+                  Home
+                </li>
+                <li className="bg-orange-300 p-3 text-white rounded-lg hover:bg-orange-400 font-semibold">
+                  Services
+                </li>
+                <li
+                  className="bg-orange-300 p-3 text-white rounded-lg hover:bg-orange-400 font-semibold"
+                  b
+                >
+                  Education & Experience
+                </li>
+                <li className="bg-orange-300 p-3 text-white rounded-lg hover:bg-orange-400 font-semibold">
+                  Plans
+                </li>
+                <li className="bg-orange-300 p-3 text-white rounded-lg hover:bg-orange-400 font-semibold">
+                  Projects
+                </li>
+                <li className="bg-orange-300 p-3 text-white rounded-lg hover:bg-orange-400 font-semibold">
+                  Blog
+                </li>
+                <li className="bg-orange-300 p-3 text-white rounded-lg hover:bg-orange-400 font-semibold">
+                  Contact
+                </li>
               </>
             )}
           </ul>
