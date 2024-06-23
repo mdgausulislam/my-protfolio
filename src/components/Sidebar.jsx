@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import CircularProgressCountUp from "./CircleProgressbar";
 import LinearProgressCountUp from "./LinearProgressbar";
 import { FaCheck } from "react-icons/fa6";
@@ -6,32 +6,42 @@ import Button from "@mui/material/Button";
 import { MdDownload } from "react-icons/md";
 import Resume from "../assets/md_Gousul_Islam_Mern-stack_developer_Bsc_in_CSE_2023.pdf";
 import Stack from "@mui/material/Stack";
-import { FaTwitter } from "react-icons/fa";
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import {
+  FaTwitter,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaGithub,
+} from "react-icons/fa";
+import { themeContext } from "./Context"; // Import themeContext
 
 export default function Sidebar() {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+
   return (
-    <div className="sidebar-content">
+    <div
+      className={`sidebar-content ${
+        darkMode ? "bg-black text-white" : "bg-white text-black"
+      }`}
+    >
       <div className="pt-5 pb-2">
         <div className="py-4 px-10">
           <p className="flex">
             <span className="font-semibold w-1/2">Residence:</span>
-            <span className="text-right">Bangladesh</span>
+            <span className="text-right opacity-50">Bangladesh</span>
           </p>
           <p className="flex">
             <span className="font-semibold w-1/2">City:</span>
-            <span className="text-right">Dhaka</span>
+            <span className="text-right opacity-50">Dhaka</span>
           </p>
           <p className="flex">
             <span className="font-semibold w-1/2">Age:</span>
-            <span className="text-right">24</span>
+            <span className="text-right opacity-50">24</span>
           </p>
         </div>
         <hr className="my-6 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
-        <div className="flex justify-between items-center px-10 ">
+        <div className="flex justify-between items-center px-10">
           <CircularProgressCountUp language="Bangla" endValue={100} />
           <CircularProgressCountUp language="English" endValue={90} />
           <CircularProgressCountUp language="Hindi" endValue={50} />
@@ -52,7 +62,7 @@ export default function Sidebar() {
           <LinearProgressCountUp skill="Git & Github" percentage={70} />
         </div>
         <hr className="my-6 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
-        <div className="px-10 space-y-1">
+        <div className="px-10 space-y-1 pb-2">
           <h1 className="flex gap-4">
             <FaCheck className="text-yellow-500 text-lg font-bold" />
             Frontend Developer
@@ -80,7 +90,11 @@ export default function Sidebar() {
           </Button>
         </div>
         <hr className="my-4 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10 pt-10" />
-        <div className="fixed bottom-0 w-[322px] text-center py-6 shadow-sm bg-white z-10">
+        <div
+          className={`fixed bottom-0 w-[322px] text-center py-6 shadow-sm z-10 ${
+            darkMode ? "bg-black" : "bg-white"
+          }`}
+        >
           <Stack direction="row" className="overflow-hidden">
             <Button>
               <FaTwitter />

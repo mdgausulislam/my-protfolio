@@ -7,7 +7,7 @@ const typeWriterText = "I am a Mern Stack Developer.";
 
 function Banner() {
   return (
-    <div className="carousel w-full relative mt-10 lg:mt-0">
+    <div className="carousel w-full relative pt-10 lg:pt-0 overflow-hidden">
       {/* Image with gradient overlay */}
       <div
         className="relative w-full h-[300px] lg:h-[500px]"
@@ -21,7 +21,7 @@ function Banner() {
         {/* Text overlay */}
         <div className="flex justify-between items-center absolute inset-0">
           <div className="flex flex-col justify-between items-start pl-2 lg:pl-20 lg:pt-32">
-            <h1 className="text-white text-2xl lg:text-5xl font-bold">
+            <h1 className="text-white text-xl lg:text-5xl font-bold">
               Discover my Amazing <br />
               Art Space!
             </h1>
@@ -41,11 +41,11 @@ function Banner() {
               Explore Now
             </button>
           </div>
-          <div className="right-0 overflow-hidden lg:mb-[200px]">
+          <div className="right-0 overflow-hidden lg:mb-[180px]">
             <img
               src={BannerImg2}
               alt=""
-              className="w-full lg:w-[550px] h-full"
+              className="w-[200px] mt-20 lg:mt-0 lg:w-[550px] h-full"
             />
           </div>
         </div>

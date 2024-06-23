@@ -23,7 +23,7 @@ const Projects = () => {
         className="portfolio-slider"
       >
         <SwiperSlide>
-          <img src={Sidebar} alt="" />
+          <img src={Sidebar} alt="" className="w-full"/>
         </SwiperSlide>
         <SwiperSlide>
           <img src={Ecommerce} alt="" />

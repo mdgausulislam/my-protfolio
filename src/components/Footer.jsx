@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <div>
-      <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
+      <footer className="footer footer-center p-10 services-dark-mode">
         <nav className="grid grid-flow-col gap-4">
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>
@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
         </nav>
         <aside>
-          <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+          <p>Copyright © 2024 - All right reserved by gausulisam5@gmail.com</p>
         </aside>
       </footer>
     </div>

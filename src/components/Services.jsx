@@ -1,19 +1,24 @@
-import * as React from "react";
+import React, { useContext } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import { themeContext } from "./Context";
 
 export default function Services() {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <div>
       <h1 className="text-3xl px-10 text-orange-500 font-bold py-6 text-center">
         My services
       </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-3 items-center lg:px-10 w-full pb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-4 px-6 w-full pb-6">
         <Card
           sx={{ maxWidth: { xs: "100%", lg: 300 }, width: "100%" }}
-          className="mx-auto mt-5 lg:mt-0"
+          className={`mx-auto mt-5 lg:mt-0 ${
+            darkMode ? "services-dark-mode" : "bg-white text-black"
+          }`}
         >
           <CardContent className="mx-5">
             <Typography
@@ -40,7 +45,9 @@ export default function Services() {
         </Card>
         <Card
           sx={{ maxWidth: { xs: "100%", lg: 300 }, width: "100%" }}
-          className="mx-auto mt-16 lg:mt-0"
+          className={`mx-auto mt-5 lg:mt-0 ${
+            darkMode ? "services-dark-mode" : "bg-white text-black"
+          }`}
         >
           <CardContent className="mx-4">
             <Typography
@@ -67,7 +74,9 @@ export default function Services() {
         </Card>
         <Card
           sx={{ maxWidth: { xs: "100%", lg: 300 }, width: "100%" }}
-          className="mx-auto mt-16 lg:mt-0"
+          className={`mx-auto mt-5 lg:mt-0 ${
+            darkMode ? "services-dark-mode" : "bg-white text-black"
+          }`}
         >
           <CardContent className="mx-6">
             <Typography

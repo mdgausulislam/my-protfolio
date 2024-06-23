@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaCheckCircle } from "react-icons/fa";
+import { themeContext } from "./Context";
 
 function Education() {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 py-5">
       <div>
@@ -11,7 +14,11 @@ function Education() {
             <div className="timeline-middle">
               <FaCheckCircle />
             </div>
-            <div className="timeline-start md:text-end mb-10 bg-red-500 px-5 pb-5 w-[352px] rounded-lg">
+            <div
+              className={`timeline-start md:text-end mb-10 bg-red-500 px-5 pb-5 w-[352px] rounded-lg ${
+                darkMode ? "services-dark-mode" : ""
+              }`}
+            >
               <time className="font-mono italic">FrontEnd Developer</time>
               <div className="text-lg font-black">Dhuruto Soft (It)</div>
               <p>Abdur Rashid Sardar High School Bilbilash</p>
@@ -29,7 +36,11 @@ function Education() {
             <div className="timeline-middle">
               <FaCheckCircle />
             </div>
-            <div className="timeline-start md:text-end mb-10 bg-red-500 w-[352px] px-5 pb-5 rounded-lg">
+            <div
+              className={`timeline-start md:text-end mb-10 bg-red-500 px-5 pb-5 w-[352px] rounded-lg ${
+                darkMode ? "services-dark-mode" : ""
+              }`}
+            >
               <time className="font-mono italic">2015</time>
               <div className="text-lg font-black">
                 Secondary School Certificate <br /> (S.S.C)
@@ -45,7 +56,11 @@ function Education() {
             <div className="timeline-middle">
               <FaCheckCircle />
             </div>
-            <div className="timeline-start md:text-end mb-10 bg-red-500 p-2 w-[352px] px-5 pb-5 rounded-lg">
+            <div
+              className={`timeline-start md:text-end mb-10 bg-red-500 px-5 pb-5 w-[352px] rounded-lg ${
+                darkMode ? "services-dark-mode" : ""
+              }`}
+            >
               <time className="font-mono italic">2018</time>
               <div className="text-lg font-black">
                 Higher School Certificate (H.S.C)
@@ -61,7 +76,11 @@ function Education() {
             <div className="timeline-middle">
               <FaCheckCircle />
             </div>
-            <div className="timeline-start md:text-end mb-10 bg-red-500 p-2 w-[352px] px-5 rounded-lg">
+            <div
+              className={`timeline-start md:text-end mb-10 bg-red-500 px-5 pb-5 w-[352px] rounded-lg ${
+                darkMode ? "services-dark-mode" : ""
+              }`}
+            >
               <time className="font-mono italic">2022</time>
               <div className="text-lg font-black">
                 Bachelor of Science (B.Sc)

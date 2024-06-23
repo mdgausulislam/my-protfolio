@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Logo from "../assets/Md Gousul Islam Hemonto.jpg";
 import { styled } from "@mui/material/styles";
 import Badge from "@mui/material/Badge";
 import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
+import { themeContext } from "./Context"; // Import themeContext
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -35,8 +36,15 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 function AvatarComponent() {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+
   return (
-    <div className="fixed top-0 w-[322px] text-center shadow-sm pb-4 bg-white z-10">
+    <div
+      className={`fixed top-0 w-[322px] text-center shadow-sm pb-4 z-10 ${
+        darkMode ? "dark-mode-Avatar" : "bg-white text-black"
+      }`}
+    >
       <Tooltip title="Md Gousul Islam Hemonto - Software Engineer">
         <StyledBadge
           overlap="circular"

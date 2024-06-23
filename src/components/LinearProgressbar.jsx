@@ -1,7 +1,8 @@
-import * as React from "react";
+import React, { useContext } from "react";
 import LinearProgress from "@mui/joy/LinearProgress";
 import Typography from "@mui/joy/Typography";
 import { useCountUp } from "use-count-up";
+import { themeContext } from "./Context";
 
 export default function LinearProgressCountUp({ skill, percentage }) {
   const { value } = useCountUp({
@@ -16,9 +17,17 @@ export default function LinearProgressCountUp({ skill, percentage }) {
     }),
   });
 
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
+
   return (
     <div className="mb-3">
-      <Typography level="body-sm" fontWeight="medium" gutterBottom>
+      <Typography
+        className={darkMode ? "circular-dark-mode" : "text-black"}
+        level="body-sm"
+        fontWeight="medium"
+        gutterBottom
+      >
         {skill}
       </Typography>
       <LinearProgress
@@ -38,6 +47,7 @@ export default function LinearProgressCountUp({ skill, percentage }) {
           fontWeight="xl"
           textColor="common.white"
           sx={{ mixBlendMode: "difference" }}
+          className={`${darkMode ? "linear-dark-mode" : " text-black"}`}
         >
           {`${Math.round(Number(value))}%`}
         </Typography>

@@ -44,11 +44,7 @@
   --Icon-fontSize: calc(0.4 * var(--_root-size));
   --CircularProgress-progressColor: var(
     --variant-solidBg,
-    var(--joy-palette-primary-solidBg, var(--joy-palette-primary-500, #ffa500))
-  ) !important;
-  --_progress-thickness: var(
-    --CircularProgress-progressThickness,
-    var(--CircularProgress-thickness, 4px)
+    var(--joy-palette-primary-solidBg, var(--joy-palette-primary-500, #f5a106))
   ) !important;
   color: var(
     --variant-softColor,
@@ -59,6 +55,7 @@
   ) !important;
   font-weight: var(--joy-fontWeight-md, 600) !important;
   font-size: calc(0.3 * var(--_root-size)) !important;
+  --CircularProgress-trackColor: none !important;
 }
 
 .MuiCircularProgress-colorPrimary {
@@ -68,8 +65,9 @@
   ) !important;
   --_progress-thickness: var(
     --CircularProgress-progressThickness,
-    var(--CircularProgress-thickness, 4px)
+    var(--CircularProgress-thickness, 5px)
   ) !important;
+  --CircularProgress-trackColor: none !important;
 }
 
 /* 
@@ -85,7 +83,7 @@ linear progress */
   ) !important;
   border: none !important;
   --LinearProgress-radius: 5px !important;
-  --LinearProgress-thickness: 10px !important;
+  --LinearProgress-thickness: 6px !important;
 }
 
 .css-1aia4jm-JoyLinearProgress-root {
@@ -93,11 +91,11 @@ linear progress */
     --variant-outlinedColor,
     var(
       --joy-palette-neutral-outlinedColor,
-      var(--joy-palette-neutral-700, #ffa500)
+      var(--joy-palette-neutral-700, #d18a07)
     )
   ) !important;
-  --LinearProgress-radius: 5px !important;
-  --LinearProgress-thickness: 10px !important;
+  --LinearProgress-radius: 4px !important;
+  --LinearProgress-thickness: 9px !important;
 }
 
 .css-18vheqr-JoyTypography-root {
@@ -105,9 +103,8 @@ linear progress */
     --joy-palette-text-tertiary,
     var(--joy-palette-neutral-600, #ffa500)
   ) !important;
-  font-weight: var(--joy-fontWeight-xl, 7600) !important;
+  font-weight: var(--joy-fontWeight-xl, 600) !important;
   color: var(--joy-palette-common-white, #f1f1f1) !important;
-  mix-blend-mode: difference;
 }
 
 .css-19kbjdd-JoyTypography-root {
@@ -125,7 +122,7 @@ linear progress */
 }
 
 .sidebar-scroll {
-  padding-top: 170px !important;
+  padding-top: 185px !important;
   flex: 1 1 auto;
   overflow-y: auto;
 }
@@ -404,11 +401,10 @@ services card */
   align-items: center;
   justify-content: space-evenly;
   padding: 2rem;
-  width: 30rem;
-  height: 12rem;
+  width: 40rem;
+
   /* styles same as work.css */
   background: rgba(255, 255, 255, 0.26);
-  border: 7px solid var(--blueCard);
   box-shadow: var(--boxShadow);
   border-radius: 20px;
 }
@@ -428,7 +424,10 @@ services card */
 /* slider */
 .t-wrapper .swiper {
   width: 100%;
-  height: 45%;
+}
+
+.swiper {
+  padding-top: 50px !important;
 }
 
 .t-wrapper .swiper-slide {
@@ -451,12 +450,21 @@ services card */
   }
 }
 
+/* recomandation complete */
+
 :where(.timeline > li) {
   grid-template-columns: none !important;
 }
 
-.css-1vf1h1q-MuiPaper-root-MuiAppBar-root {
-  display: none !important;
+@media screen and (min-width: 768px) {
+  .css-1vf1h1q-MuiPaper-root-MuiAppBar-root {
+    display: none !important;
+  }
+}
+
+.css-134qg7o-MuiButtonBase-root-MuiIconButton-root {
+  margin-left: 0px !important;
+  margin-right: -16px !important;
 }
 
 .css-1g33kmd {
@@ -481,60 +489,6 @@ body.light-mode {
 
 .theme-toggle .flex {
   display: flex;
-}
-
-.contact-form {
-  padding: 0 3rem 0 3rem;
-  display: flex;
-  height: 80vh;
-  margin-top: 4rem;
-  /* scroll */
-  padding-top: 3rem;
-}
-
-.c-right {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  flex: 1;
-}
-
-.c-right > form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-}
-
-.c-right .user {
-  width: 20rem;
-  height: 2rem;
-  padding: 0.3em;
-  outline: none;
-  border: 2px solid var(--orange);
-  border-radius: 8px;
-  font-size: 16px;
-}
-
-textarea {
-  height: 4rem !important;
-}
-
-.c-blur1 {
-  top: 1rem;
-  left: 8rem;
-}
-
-@media screen and (max-width: 480px) {
-  .contact-form {
-    padding: 0;
-    flex-direction: column;
-    gap: 5rem;
-    height: 40rem;
-  }
-  .c-right .user {
-    width: 16rem;
-  }
 }
 
 .swiper-button-prev:after,
@@ -575,3 +529,61 @@ textarea {
   --tw-text-opacity: 1;
   color: rgb(79 70 229 / var(--tw-text-opacity));
 }
+
+/* 
+
+Dark mode work */
+/* theme.css */
+
+/* Light mode styles */
+.light-mode {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.light-mode .drawer-paper {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* Dark mode styles */
+.dark-mode-Avatar {
+  color: #f1f1f1;
+  background-color: #242d49;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+}
+
+.dark-mode .drawer-paper {
+  background-color: #121212;
+  color: rgba(255, 255, 255, 0.87);
+}
+.circular-dark-mode {
+  color: #f1f1f1 !important;
+}
+
+.linear-dark-mode {
+  color: #f1f1f1 !important;
+  font-weight: 700 !important;
+  opacity: 1;
+}
+
+.services-dark-mode {
+  background: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  color: #f1f1f1 !important;
+}
+
+.art-card {
+  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+  -webkit-box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+  box-shadow: 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+

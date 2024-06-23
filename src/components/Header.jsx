@@ -75,7 +75,7 @@ export default function Header({ window }) {
                   color="inherit"
                   aria-label="toggle drawer2"
                   edge="start"
-                  onClick={handleContactClick} 
+                  onClick={handleContactClick}
                   sx={{ mr: 2 }}
                 >
                   {drawerOpen ? <FaAngleLeft /> : <CiMenuKebab />}

@@ -1,38 +1,121 @@
 import React from "react";
+import { FaUserAlt } from "react-icons/fa";
+import { FaAt } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
 
 function Contact() {
   return (
-    <div className="contact-form" id="contact">
-      {/* left side copy and paste from work section */}
-      <div className="w-left">
-        <div className="awesome">
-          {/* darkMode */}
-          <span>Get in Touch</span>
-          <span>Contact me</span>
-          <div
-            className="blur s-blur1"
-            style={{ background: "#ABF1FF94" }}
-          ></div>
+    <div>
+      <h1 className="text-2xl text-orange-500 font-bold py-4">
+        Contact Information
+      </h1>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="art-card flex">
+          <div class="w-1/2 pr-4 space-y-4 text-sm opacity-50">
+            <p class="font-bold">Country:</p>
+            <p class="font-bold">City:</p>
+            <p class="font-bold">Street:</p>
+          </div>
+          <div class="w-1/2 text-sm opacity-50 space-y-4">
+            <p>Bangladesh</p>
+            <p>Dhaka</p>
+            <p>Main Street</p>
+          </div>
+        </div>
+        <div class="art-card flex">
+          <div class="w-1/2 pr-4 space-y-4 text-sm opacity-50">
+            <p class="font-bold">Country:</p>
+            <p class="font-bold">City:</p>
+            <p class="font-bold">Street:</p>
+          </div>
+          <div class="w-1/2 text-sm opacity-50 space-y-4">
+            <p>Bangladesh</p>
+            <p>Dhaka</p>
+            <p>Main Street</p>
+          </div>
+        </div>
+        <div class="art-card flex">
+          <div class="w-1/2 pr-4 space-y-4 text-sm opacity-50">
+            <p class="font-bold">Country:</p>
+            <p class="font-bold">City:</p>
+            <p class="font-bold">Street:</p>
+          </div>
+          <div class="w-1/2 text-sm opacity-50 space-y-4">
+            <p>Bangladesh</p>
+            <p>Dhaka</p>
+            <p>Main Street</p>
+          </div>
         </div>
       </div>
-      {/* right side form */}
-      <div className="c-right">
-        <form>
-          <input
-            type="text"
-            name="user_name"
-            className="user"
-            placeholder="Name"
-          />
-          <input
-            type="email"
-            name="user_email"
-            className="user"
-            placeholder="Email"
-          />
-          <textarea name="message" className="user" placeholder="Message" />
-          <input type="submit" value="Send" className="button" />
-        </form>
+      <div className="py-4">
+        <h1 className="text-2xl text-orange-500 font-bold pb-4">
+          Get in Touch
+        </h1>
+        <div className="px-10 py-5 art-card" id="contact">
+          <form>
+            <label htmlFor="username" className="block mb-3 text-sm font-bold">
+              Username
+            </label>
+            <div className="flex mb-6 h-14">
+              <div
+                className="flex items-center h-full rounded-l-md border-none 
+            text-white bg-black px-5 transition-colors duration-300 ease-in-out"
+              >
+                <FaUserAlt />
+              </div>
+              <input
+                type="text"
+                id="username"
+                className="rounded-none rounded-r-md bg-gradient-to-r from-[#252532] to-[#23232d] border-none
+             text-[#fafafc] block flex-1 min-w-0 w-full text-sm p-2.5 shadow-inner transition 
+             ease-in-out duration-300 focus:outline-none"
+                placeholder="Username"
+              />
+            </div>
+
+            <label htmlFor="email" className="block mb-2 text-sm font-medium">
+              Email
+            </label>
+            <div className="flex mb-6 h-14">
+              <div
+                className="flex items-center h-full rounded-l-md border-none 
+            text-white bg-black px-5 transition-colors duration-300 ease-in-out"
+              >
+                <FaAt />
+              </div>
+              <input
+                type="email"
+                id="email"
+                className="rounded-none rounded-r-md bg-gradient-to-r from-[#252532] to-[#23232d] 
+            border-none text-[#fafafc] block flex-1 min-w-0 w-full text-sm p-2.5 shadow-inner 
+            transition ease-in-out duration-300 focus:outline-none"
+                placeholder="Email"
+              />
+            </div>
+
+            <label htmlFor="message" className="block mb-2 text-sm font-medium">
+              Message
+            </label>
+            <div className="flex mb-6 h-24">
+              <div
+                className="flex items-center h-full rounded-l-md border-none 
+            text-white bg-black px-5 transition-colors duration-300 ease-in-out"
+              >
+                <IoMail />
+              </div>
+
+              <textarea
+                id="message"
+                className="rounded-none rounded-r-md bg-gradient-to-r from-[#252532] to-[#23232d] border-none
+             text-[#fafafc] block flex-1 min-w-0 w-full text-sm p-2.5 shadow-inner transition
+             ease-in-out duration-300 focus:outline-none"
+                placeholder="Message"
+              />
+            </div>
+
+            <button className="button px-14 my-4">Message</button>
+          </form>
+        </div>
       </div>
     </div>
   );
