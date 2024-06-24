@@ -5,15 +5,19 @@ import PricePlans from "./PricePlans";
 import Works from "./Works";
 import Projects from "./Projects";
 import Blog from "./Blog";
+import Recomandation from "./Recomandation";
+import Experience from "./Experience";
 
 const Home = () => {
   return (
-    <div>
+    <div className="">
       <Banner />
+      <Experience/>
       <Services />
       <PricePlans />
       <Works />
       <Projects />
+      <Recomandation />
       <Blog />
     </div>
   );

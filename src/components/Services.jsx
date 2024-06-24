@@ -4,6 +4,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { themeContext } from "./Context";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   const theme = useContext(themeContext);
@@ -38,9 +39,11 @@ export default function Services() {
             </p>
           </CardContent>
           <CardActions className="flex justify-center my-3">
-            <button className="button text-white font-bold px-10 py-2">
-              Order Now
-            </button>
+            <Link to="/contact">
+              <button className="button text-white font-bold px-20 py-2">
+                Order Now
+              </button>
+            </Link>
           </CardActions>
         </Card>
         <Card
@@ -67,9 +70,11 @@ export default function Services() {
             </p>
           </CardContent>
           <CardActions className="flex justify-center my-3">
-            <button className="button text-white font-bold px-10 py-2">
-              Order Now
-            </button>
+            <Link to="/contact">
+              <button className="button text-white font-bold px-20 py-2">
+                Order Now
+              </button>
+            </Link>
           </CardActions>
         </Card>
         <Card
@@ -96,9 +101,11 @@ export default function Services() {
             </p>
           </CardContent>
           <CardActions className="flex justify-center my-3">
-            <button className="button text-white font-bold px-10 py-2">
-              Order Now
-            </button>
+            <Link to="/contact">
+              <button className="button text-white font-bold px-20 py-2">
+                Order Now
+              </button>
+            </Link>
           </CardActions>
         </Card>
       </div>

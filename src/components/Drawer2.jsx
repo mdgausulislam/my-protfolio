@@ -87,12 +87,12 @@ function Drawer2({ open, handleDrawerToggle }) {
           <DrawerHeader>
             {open ? (
               <FaAngleLeft
-                className="cursor-pointer"
+                className="cursor-pointer text-2xl"
                 onClick={handleDrawerToggle}
               />
             ) : (
               <MenuIcon
-                className="cursor-pointer"
+                className="cursor-pointer text-2xl"
                 onClick={handleDrawerToggle}
               />
             )}

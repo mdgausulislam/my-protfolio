@@ -18,7 +18,7 @@ const Works = () => {
       <h1 className="text-3xl px-10 text-orange-500 font-bold py-6 text-center">
         My Works
       </h1>
-      <div className="works" id="works">
+      <div className="works pl-10 lg:pl-2" id="works">
         {/* left side */}
         <div className="w-left">
           <div className="awesome">

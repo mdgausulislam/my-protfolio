@@ -32,7 +32,7 @@ function Recomandation() {
     },
   ];
   return (
-    <div className="t-wrapper" id="testimonial">
+    <div className="t-wrapper h-auto lg:pb-20" id="testimonial">
       <div className="t-heading">
         <h1 className="text-3xl px-10 text-orange-500 font-bold py-6 text-center">
           Recomandation

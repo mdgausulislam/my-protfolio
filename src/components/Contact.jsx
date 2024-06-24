@@ -5,7 +5,7 @@ import { IoMail } from "react-icons/io5";
 
 function Contact() {
   return (
-    <div>
+    <div className="px-5">
       <h1 className="text-2xl text-orange-500 font-bold py-4">
         Contact Information
       </h1>
@@ -19,31 +19,31 @@ function Contact() {
           <div class="w-1/2 text-sm opacity-50 space-y-4">
             <p>Bangladesh</p>
             <p>Dhaka</p>
-            <p>Main Street</p>
+            <p>Shewrapara</p>
           </div>
         </div>
         <div class="art-card flex">
           <div class="w-1/2 pr-4 space-y-4 text-sm opacity-50">
-            <p class="font-bold">Country:</p>
-            <p class="font-bold">City:</p>
-            <p class="font-bold">Street:</p>
+            <p class="font-bold">Support service:</p>
+            <p class="font-bold">Office:</p>
+            <p class="font-bold">Personal:</p>
           </div>
           <div class="w-1/2 text-sm opacity-50 space-y-4">
-            <p>Bangladesh</p>
-            <p>Dhaka</p>
-            <p>Main Street</p>
+            <p>Desktop / Laptop</p>
+            <p>MohammadPur</p>
+            <p>01785003901</p>
           </div>
         </div>
         <div class="art-card flex">
           <div class="w-1/2 pr-4 space-y-4 text-sm opacity-50">
-            <p class="font-bold">Country:</p>
-            <p class="font-bold">City:</p>
-            <p class="font-bold">Street:</p>
+            <p class="font-bold">Name:</p>
+            <p class="font-bold">Mail:</p>
+            <p class="font-bold">Phone:</p>
           </div>
           <div class="w-1/2 text-sm opacity-50 space-y-4">
-            <p>Bangladesh</p>
-            <p>Dhaka</p>
-            <p>Main Street</p>
+            <p>Md Gousul Islam</p>
+            <p>gausulislam5@gmail.com</p>
+            <p>01785003901</p>
           </div>
         </div>
       </div>

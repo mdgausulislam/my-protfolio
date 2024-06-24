@@ -15,15 +15,22 @@ function Education() {
               <FaCheckCircle />
             </div>
             <div
-              className={`timeline-start md:text-end mb-10 bg-red-500 px-5 pb-5 w-[352px] rounded-lg ${
+              className={`timeline-start md:text-end py-4 mb-10 bg-red-500 px-5 pb-5 w-[352px] rounded-lg ${
                 darkMode ? "services-dark-mode" : ""
               }`}
             >
-              <time className="font-mono italic">FrontEnd Developer</time>
-              <div className="text-lg font-black">Dhuruto Soft (It)</div>
-              <p>Abdur Rashid Sardar High School Bilbilash</p>
-              <p>Passing Year: 2015</p>
-              <p>Result: 4.39 (Out of 5)</p>
+              <time className="font-mono italic flex items-center justify-center">
+                FrontEnd Developer (Internship)
+              </time>
+              <div className="text-lg font-black flex items-center justify-center pb-3">
+                Dhuruto Soft (It)
+              </div>
+              <p className="flex text-left">
+                Experienced Frontend Developer at Dhurosoft, specializing in
+                creating responsive and user-friendly web interfaces with modern
+                technologies. Skilled in HTML, CSS, JavaScript, and React to
+                deliver high-quality digital solutions.
+              </p>
             </div>
             <hr />
           </li>

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { themeContext } from "./Context";
+import { Link } from "react-router-dom";
 
 function PricePlans() {
   const theme = useContext(themeContext);
@@ -116,7 +117,9 @@ function PricePlans() {
                   </span>
                 </li>
               </ul>
-              <button className="button">Get started</button>
+              <Link to="/contact">
+                <button className="button px-20">Order Now</button>
+              </Link>
             </div>
 
             <div
@@ -224,7 +227,9 @@ function PricePlans() {
                   </span>
                 </li>
               </ul>
-              <button className="button">Get started</button>
+              <Link to="/contact">
+                <button className="button px-20">Order Now</button>
+              </Link>
             </div>
 
             <div
@@ -331,7 +336,9 @@ function PricePlans() {
                   </span>
                 </li>
               </ul>
-              <button className="button">Get started</button>
+              <Link to="/contact">
+                <button className="button px-20">Order Now</button>
+              </Link>
             </div>
           </div>
         </div>

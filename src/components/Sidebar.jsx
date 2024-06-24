@@ -40,13 +40,13 @@ export default function Sidebar() {
             <span className="text-right opacity-50">24</span>
           </p>
         </div>
-        <hr className="my-6 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+        <hr className="my-6 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10 opacity-30" />
         <div className="flex justify-between items-center px-10">
           <CircularProgressCountUp language="Bangla" endValue={100} />
           <CircularProgressCountUp language="English" endValue={90} />
           <CircularProgressCountUp language="Hindi" endValue={50} />
         </div>
-        <hr className="my-6 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+        <hr className="my-6 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10 opacity-30" />
         <div className="flex-col justify-between items-center px-10">
           <LinearProgressCountUp skill="HTML" percentage={95} />
           <LinearProgressCountUp skill="CSS" percentage={95} />
@@ -61,7 +61,7 @@ export default function Sidebar() {
           <LinearProgressCountUp skill="Mui Material" percentage={78} />
           <LinearProgressCountUp skill="Git & Github" percentage={70} />
         </div>
-        <hr className="my-6 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+        <hr className="my-6 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10 opacity-30" />
         <div className="px-10 space-y-1 pb-2">
           <h1 className="flex gap-4">
             <FaCheck className="text-yellow-500 text-lg font-bold" />
@@ -76,7 +76,7 @@ export default function Sidebar() {
             Git Knowledge
           </h1>
         </div>
-        <hr className="mt-2 mb-10 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10 " />
+        <hr className="mt-2 mb-10 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10 opacity-30" />
         <div className="text-center">
           <Button
             component="a"
@@ -89,10 +89,10 @@ export default function Sidebar() {
             Download Cv
           </Button>
         </div>
-        <hr className="my-4 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10 pt-10" />
+        <hr className="my-4 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10 pt-10 opacity-30" />
         <div
           className={`fixed bottom-0 w-[322px] text-center py-6 shadow-sm z-10 ${
-            darkMode ? "bg-black" : "bg-white"
+            darkMode ? "footer-card" : "bg-white"
           }`}
         >
           <Stack direction="row" className="overflow-hidden">

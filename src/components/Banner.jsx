@@ -19,14 +19,14 @@ function Banner() {
         }}
       >
         {/* Text overlay */}
-        <div className="flex justify-between items-center absolute inset-0">
-          <div className="flex flex-col justify-between items-start pl-2 lg:pl-20 lg:pt-32">
-            <h1 className="text-white text-xl lg:text-5xl font-bold">
+        <div className="lg:flex lg:justify-between lg:items-center absolute inset-0">
+          <div className="flex flex-col justify-between items-center text-center lg:text-left lg:items-start pl-2 lg:pl-20 pt-20 lg:pt-32">
+            <h1 className="text-white text-2xl lg:text-5xl font-bold">
               Discover my Amazing <br />
               Art Space!
             </h1>
             <p className="typewriter pt-2">
-              <span className="text-white text-xs lg:text-xl hidden lg:block">
+              <span className="text-white text-base lg:text-xl">
                 <Typewriter
                   words={[typeWriterText]}
                   loop={5}
@@ -45,7 +45,7 @@ function Banner() {
             <img
               src={BannerImg2}
               alt=""
-              className="w-[200px] mt-20 lg:mt-0 lg:w-[550px] h-full"
+              className="w-[220px] mt-20 lg:mt-0 lg:w-[690px] h-full hidden lg:block"
             />
           </div>
         </div>

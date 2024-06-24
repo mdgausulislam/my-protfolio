@@ -104,13 +104,13 @@ function Blog() {
 
   return (
     <>
-      <section className="container mx-auto py-10 pb-10 lg:px-10 lg:py-28">
+      <section className="container mx-auto pb-10 lg:px-10 lg:py-28">
         <Typography
           variant="h2"
           color="blue-gray"
-          className="!text-2xl !leading-snug lg:!text-3xl"
+          className="text-3xl px-10 text-orange-500 font-bold py-6 text-center"
         >
-         Blog
+          Blog
         </Typography>
         <div className="mt-10">
           <Slider {...settings}>

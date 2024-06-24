@@ -42,10 +42,13 @@ function AvatarComponent() {
   return (
     <div
       className={`fixed top-0 w-[322px] text-center shadow-sm pb-4 z-10 ${
-        darkMode ? "dark-mode-Avatar" : "bg-white text-black"
+        darkMode ? "footer-card" : "bg-white text-black"
       }`}
     >
-      <Tooltip title="Md Gousul Islam Hemonto - Software Engineer">
+      <Tooltip
+        title="Md Gousul Islam Hemonto - Software Engineer"
+        placement="right-start"
+      >
         <StyledBadge
           overlap="circular"
           anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
@@ -58,7 +61,7 @@ function AvatarComponent() {
           />
         </StyledBadge>
       </Tooltip>
-      <h1 className="text-lg font-bold">Md Gousul Islam Hemonto</h1>
+      <h1 className="text-lg font-bold hover:text-orange-500 cursor-pointer">Md Gousul Islam Hemonto</h1>
       <p>Software Engineer</p>
       <p>Mern Stack Developer</p>
     </div>

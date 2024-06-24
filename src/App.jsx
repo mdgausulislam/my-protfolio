@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
@@ -18,32 +18,52 @@ import Blog from "./components/Blog";
 function App() {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulating data fetching or other asynchronous operations
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Change the duration as per your requirement
+  }, []);
 
   return (
     <ThemeProvider>
       <div
-        className="overflow-hidden px-2 py-3 text-[var--(black)]"
+        className="overflow-hidden px-2 py-3 bg-white"
         style={{
-          background: darkMode ? "black" : "",
-          color: darkMode ? "white" : "",
+          background: darkMode ? "black" : "white",
+          color: darkMode ? "white" : "light-mode",
         }}
       >
-        <Drawer2 />
-        <div className="md:ml-[340px] md:mr-[65px]">
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/price-plans" element={<PricePlans />} />
-            <Route path="/works" element={<Works />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/recomandation" element={<Recomandation />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<Blog />} />
-          </Routes>
-          <Footer />
-        </div>
+        {loading ? (
+          <div className="flex flex-col justify-center items-center h-screen">
+            <div className="loader">100</div>{" "}
+            {/* Add your loader styling or component here */}
+            <div>
+              <p className="text-orange-500 font-bold pt-4"> Md Gousul Islam Hemonto</p>
+            </div>
+          </div>
+        ) : (
+          <>
+            <Drawer2 />
+            <div className="md:ml-[340px] md:mr-[65px]">
+              <Header />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/education" element={<Education />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/price-plans" element={<PricePlans />} />
+                <Route path="/works" element={<Works />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/recomandation" element={<Recomandation />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+              </Routes>
+              <Footer />
+            </div>
+          </>
+        )}
       </div>
     </ThemeProvider>
   );

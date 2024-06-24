@@ -22,14 +22,25 @@ export default function LinearProgressCountUp({ skill, percentage }) {
 
   return (
     <div className="mb-3">
-      <Typography
-        className={darkMode ? "circular-dark-mode" : "text-black"}
-        level="body-sm"
-        fontWeight="medium"
-        gutterBottom
-      >
-        {skill}
-      </Typography>
+      <div className="flex justify-between items-center">
+        <Typography
+          className={darkMode ? "circular-dark-mode" : "text-black"}
+          level="body-sm"
+          fontWeight="medium"
+          gutterBottom
+        >
+          {skill}
+        </Typography>
+        <Typography
+          level="body-xs"
+          fontWeight="xl"
+          textColor="common.white"
+          sx={{ mixBlendMode: "difference" }}
+          className={`${darkMode ? "linear-dark-mode" : " text-black"}`}
+        >
+          {`${Math.round(Number(value))}%`}
+        </Typography>
+      </div>
       <LinearProgress
         determinate
         variant="outlined"
@@ -41,17 +52,7 @@ export default function LinearProgressCountUp({ skill, percentage }) {
           "--LinearProgress-radius": "10px",
           "--LinearProgress-thickness": "12px",
         }}
-      >
-        <Typography
-          level="body-xs"
-          fontWeight="xl"
-          textColor="common.white"
-          sx={{ mixBlendMode: "difference" }}
-          className={`${darkMode ? "linear-dark-mode" : " text-black"}`}
-        >
-          {`${Math.round(Number(value))}%`}
-        </Typography>
-      </LinearProgress>
+      ></LinearProgress>
     </div>
   );
 }
