@@ -69,6 +69,10 @@ export default function Header({ window }) {
                 </IconButton>
               </div>
             </div>
+            <div class="text-center">
+              <h1 class="text-orange-500 block">Md Gousul Islam Hemonto</h1>
+              <p class="text-orange-500">Software Engineer</p>
+            </div>
             <div className="flex">
               <div>
                 <IconButton

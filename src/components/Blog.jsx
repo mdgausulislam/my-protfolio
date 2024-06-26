@@ -23,7 +23,7 @@ function ContentCard({ img, title, desc }) {
         alt="bg"
         className="absolute inset-0 h-full w-full object-cover object-center"
       />
-      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-black/40" />
       <CardBody className="relative flex flex-col justify-end">
         <Typography variant="h4" color="white">
           {title}

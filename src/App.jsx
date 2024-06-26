@@ -38,10 +38,16 @@ function App() {
       >
         {loading ? (
           <div className="flex flex-col justify-center items-center h-screen">
-            <div className="loader">100</div>{" "}
+            <div className="loader"></div>{" "}
             {/* Add your loader styling or component here */}
-            <div>
-              <p className="text-orange-500 font-bold pt-4"> Md Gousul Islam Hemonto</p>
+            <div className="text-center">
+              <p className="text-orange-500 font-bold pt-4 block">
+                {" "}
+                Md Gousul Islam Hemonto
+              </p>
+              <p className="text-orange-500 font-bold pt-2">
+                Software Engineering
+              </p>
             </div>
           </div>
         ) : (
