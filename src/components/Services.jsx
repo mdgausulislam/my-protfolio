@@ -10,13 +10,13 @@ export default function Services() {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   return (
-    <div>
+    <div className="mt-8 lg:mt-0">
       <h1 className="text-3xl px-10 text-orange-500 font-bold py-6 text-center">
         My services
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-4 px-6 w-full pb-6">
         <Card
-          sx={{ maxWidth: { xs: "100%", lg: 300 }, width: "100%" }}
+          sx={{ maxWidth: { xs: "100%", lg: 320 }, width: "100%" }}
           className={`mx-auto mt-5 lg:mt-0 ${
             darkMode ? "services-dark-mode" : "bg-white text-black"
           }`}
@@ -47,7 +47,7 @@ export default function Services() {
           </CardActions>
         </Card>
         <Card
-          sx={{ maxWidth: { xs: "100%", lg: 300 }, width: "100%" }}
+          sx={{ maxWidth: { xs: "100%", lg: 320 }, width: "100%" }}
           className={`mx-auto mt-5 lg:mt-0 ${
             darkMode ? "services-dark-mode" : "bg-white text-black"
           }`}
@@ -59,7 +59,7 @@ export default function Services() {
               component="div"
               className="text-center font-semibold text-orange-500 text-base"
             >
-              Mern Stack Developer
+              Mern-Stack Developer
             </Typography>
             <p className="text-base space-y-10">
               Elevate I web applications with expert MERN stack development! I
@@ -78,7 +78,7 @@ export default function Services() {
           </CardActions>
         </Card>
         <Card
-          sx={{ maxWidth: { xs: "100%", lg: 300 }, width: "100%" }}
+          sx={{ maxWidth: { xs: "100%", lg: 320 }, width: "100%" }}
           className={`mx-auto mt-5 lg:mt-0 ${
             darkMode ? "services-dark-mode" : "bg-white text-black"
           }`}

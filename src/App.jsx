@@ -14,6 +14,7 @@ import Projects from "./components/Projects";
 import Recomandation from "./components/Recomandation";
 import Contact from "./components/Contact";
 import Blog from "./components/Blog";
+import ProjectDetails from "./components/ProjectDetails";
 
 function App() {
   const theme = useContext(themeContext);
@@ -65,6 +66,7 @@ function App() {
                 <Route path="/recomandation" element={<Recomandation />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/project/:id" element={<ProjectDetails />} />
               </Routes>
               <Footer />
             </div>

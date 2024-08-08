@@ -104,7 +104,7 @@ function Blog() {
 
   return (
     <>
-      <section className="container mx-auto pb-10 lg:px-10 lg:py-28">
+      <section className="container mx-auto pb-10 lg:px-10 lg:py-28 mt-10 lg:mt-0">
         <Typography
           variant="h2"
           color="blue-gray"

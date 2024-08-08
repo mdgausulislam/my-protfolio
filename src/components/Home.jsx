@@ -7,12 +7,13 @@ import Projects from "./Projects";
 import Blog from "./Blog";
 import Recomandation from "./Recomandation";
 import Experience from "./Experience";
+import Header from "./Header";
 
 const Home = () => {
   return (
     <div className="">
       <Banner />
-      <Experience/>
+      <Experience />
       <Services />
       <PricePlans />
       <Works />

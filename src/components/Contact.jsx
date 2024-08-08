@@ -5,7 +5,7 @@ import { IoMail } from "react-icons/io5";
 
 function Contact() {
   return (
-    <div className="px-5">
+    <div className="px-5 mt-10 lg:mt-0">
       <h1 className="text-2xl text-orange-500 font-bold py-4">
         Contact Information
       </h1>

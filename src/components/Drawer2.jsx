@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -40,7 +40,6 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "flex-end",
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
 
@@ -61,13 +60,21 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
+
 function Drawer2({ open, handleDrawerToggle }) {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   const dispatch = theme.dispatch;
 
+  const [currentSection, setCurrentSection] = useState("Home");
+
   const handleToggle = () => {
     dispatch({ type: "toggle" });
+  };
+
+  const handleLinkClick = (section) => {
+    setCurrentSection(section);
+    handleDrawerToggle();
   };
 
   return (
@@ -99,16 +106,19 @@ function Drawer2({ open, handleDrawerToggle }) {
           </DrawerHeader>
           <Divider />
           <List>
-            <ul className="pl-8 text-sm space-y-2 pt-20 cursor-pointer">
+            <ul className="pl-8 text-sm space-y-2 pt-20 cursor-pointer sm:space-y-6">
               {!open && (
                 <li className="text-bold text-2xl transform rotate-90 mt-32 opacity-50 mr-6">
-                  <Link to="/">Home</Link>
+                  {currentSection}
                 </li>
               )}
+
               {open && (
                 <>
                   <div
-                    className={`theme-toggle pb-5 ${darkMode ? "dark" : "light"}`}
+                    className={`theme-toggle pb-5 ${
+                      darkMode ? "dark" : "light"
+                    }`}
                   >
                     <label className="swap swap-rotate">
                       <input
@@ -144,7 +154,9 @@ function Drawer2({ open, handleDrawerToggle }) {
                         : "hover:text-orange-500"
                     }`}
                   >
-                    <Link to="/">Home</Link>
+                    <Link to="/" onClick={() => handleLinkClick("Home")}>
+                      Home
+                    </Link>
                   </li>
                   <li
                     className={`text-black rounded-lg font-semibold opacity-50  ${
@@ -153,7 +165,12 @@ function Drawer2({ open, handleDrawerToggle }) {
                         : "hover:text-orange-500"
                     }`}
                   >
-                    <Link to="/services">Services</Link>
+                    <Link
+                      to="/services"
+                      onClick={() => handleLinkClick("Services")}
+                    >
+                      Services
+                    </Link>
                   </li>
                   <li
                     className={`text-black rounded-lg font-semibold opacity-50  ${
@@ -162,7 +179,12 @@ function Drawer2({ open, handleDrawerToggle }) {
                         : "hover:text-orange-500"
                     }`}
                   >
-                    <Link to="/education">
+                    <Link
+                      to="/education"
+                      onClick={() =>
+                        handleLinkClick("Education & Work Experience")
+                      }
+                    >
                       Education & <br /> Work Experience
                     </Link>
                   </li>
@@ -173,7 +195,12 @@ function Drawer2({ open, handleDrawerToggle }) {
                         : "hover:text-orange-500"
                     }`}
                   >
-                    <Link to="/price-plans">Plans</Link>
+                    <Link
+                      to="/price-plans"
+                      onClick={() => handleLinkClick("Plans")}
+                    >
+                      Plans
+                    </Link>
                   </li>
                   <li
                     className={`text-black rounded-lg font-semibold opacity-50  ${
@@ -182,7 +209,12 @@ function Drawer2({ open, handleDrawerToggle }) {
                         : "hover:text-orange-500"
                     }`}
                   >
-                    <Link to="/projects">Projects</Link>
+                    <Link
+                      to="/projects"
+                      onClick={() => handleLinkClick("Projects")}
+                    >
+                      Projects
+                    </Link>
                   </li>
                   <li
                     className={`text-black rounded-lg font-semibold opacity-50  ${
@@ -191,7 +223,9 @@ function Drawer2({ open, handleDrawerToggle }) {
                         : "hover:text-orange-500"
                     }`}
                   >
-                    <Link to="/blog">Blog</Link>
+                    <Link to="/blog" onClick={() => handleLinkClick("Blog")}>
+                      Blog
+                    </Link>
                   </li>
                   <li
                     className={`text-black rounded-lg font-semibold opacity-50  ${
@@ -200,7 +234,12 @@ function Drawer2({ open, handleDrawerToggle }) {
                         : "hover:text-orange-500"
                     }`}
                   >
-                    <Link to="/contact">Contact</Link>
+                    <Link
+                      to="/contact"
+                      onClick={() => handleLinkClick("Contact")}
+                    >
+                      Contact
+                    </Link>
                   </li>
                 </>
               )}

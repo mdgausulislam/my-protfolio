@@ -6,7 +6,7 @@ function Education() {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 py-5">
+    <div className="grid grid-cols-1 lg:grid-cols-2 py-5 mt-10 lg:mt-0">
       <div>
         <h1 className="text-2xl font-bold text-center pb-4">Work Experience</h1>
         <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
@@ -37,7 +37,7 @@ function Education() {
         </ul>
       </div>
       <div>
-        <h1 className="text-2xl font-bold text-center pb-4">Education</h1>
+        <h1 className="text-2xl font-bold text-center pb-4 mt-5 lg:mt-0">Education</h1>
         <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
           <li className=" ">
             <div className="timeline-middle">

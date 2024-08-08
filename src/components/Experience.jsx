@@ -13,7 +13,7 @@ function Experience() {
         <span className="text-xl lg:text-2xl font-bold pl-1 text-orange-500">
           +
         </span>
-        <span className="pl-6 lg:pl-4 text-sm lg:text-lg font-semibold">
+        <span className="pl-6 lg:pl-4 text-sm lg:text-lg font-semibold whitespace-nowrap text-end">
           {" "}
           Years Experience
         </span>
@@ -27,7 +27,7 @@ function Experience() {
         <span className="text-xl lg:text-2xl font-bold pl-1 text-orange-500">
           +
         </span>
-        <span className="pl-6 lg:pl-4 text-sm lg:text-lg font-semibold">
+        <span className="pl-6 lg:pl-4 text-sm lg:text-lg font-semibold whitespace-nowrap">
           {" "}
           Complete Projects
         </span>
@@ -41,7 +41,7 @@ function Experience() {
         <span className="text-xl lg:text-2xl font-bold pl-1 text-orange-500">
           +
         </span>
-        <span className="pl-6 lg:pl-4 text-sm lg:text-lg font-semibold">
+        <span className="pl-6 lg:pl-4 text-sm lg:text-lg font-semibold whitespace-nowrap">
           {" "}
           Happy Customers
         </span>
@@ -55,7 +55,7 @@ function Experience() {
         <span className="text-xl lg:text-2xl font-bold pl-1 text-orange-500">
           +
         </span>
-        <span className="pl-6 lg:pl-4 text-sm lg:text-lg font-semibold">
+        <span className="pl-6 lg:pl-4 text-sm lg:text-lg font-semibold whitespace-nowrap">
           {" "}
           Honar and Award
         </span>

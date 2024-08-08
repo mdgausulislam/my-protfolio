@@ -7,7 +7,7 @@ function PricePlans() {
   const darkMode = theme.state.darkMode;
   return (
     <div>
-      <section className="dark:bg-gray-900">
+      <section className="dark:bg-gray-900 mt-5 lg:mt-0">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="mx-auto max-w-screen-md mb-8 lg:mb-12">
             <h1 className="text-3xl px-10 text-orange-500 font-bold py-6 text-center">

@@ -70,8 +70,28 @@
   --CircularProgress-trackColor: none !important;
 }
 
-/* 
-linear progress */
+/* header */
+.css-i6s8oy {
+  min-height: 0px !important;
+}
+
+.css-14ux432::before {
+  background-color: orange !important;
+}
+
+.css-14ux432 {
+  color: var(
+    --variant-outlinedColor,
+    var(
+      --joy-palette-neutral-outlinedColor,
+      var(--joy-palette-neutral-700, #ffa500)
+    )
+  ) !important;
+
+  --LinearProgress-radius: 5px !important;
+  --LinearProgress-thickness: 6px !important;
+}
+/* linear progress */
 
 .css-1aia4jm-JoyLinearProgress-root {
   color: var(
@@ -329,12 +349,6 @@ services card */
   justify-content: flex-start !important;
 }
 
-@media (max-width: 640px) {
-  .css-2dum1v-MuiDrawer-docked .MuiDrawer-paper {
-    display: none !important;
-  }
-}
-
 /* recomandation */
 
 .t-wrapper {
@@ -422,15 +436,15 @@ services card */
   color: #fff !important;
 }
 
-.css-vd7msv {
+/* .css-vd7msv {
   display: none !important;
-}
+} */
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .css-1vf1h1q-MuiPaper-root-MuiAppBar-root {
     display: none !important;
   }
-}
+} */
 
 .css-134qg7o-MuiButtonBase-root-MuiIconButton-root {
   margin-left: 0px !important;
@@ -588,19 +602,19 @@ Dark mode work */
   }
 }
 
-/* .css-vd7msv {
-  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  box-sizing: border-box;
-  flex-shrink: 0;
-  position: fixed;
-  z-index: 1100;
-  top: 0px;
-  left: auto;
-  right: 0px;
-  background-color: rgb(25, 118, 210);
-  color: rgb(255, 255, 255);
-} */
+@media (max-width: 640px) {
+  .css-bpnhhg .MuiDrawer-paper {
+    display: none !important;
+  }
+
+  .css-pio6kb {
+    margin: 0px !important;
+    padding: 15px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .css-i6s8oy {
+    display: none !important;
+  }
+}

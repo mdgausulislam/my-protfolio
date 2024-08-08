@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -17,8 +17,8 @@ const drawerWidth = 340;
 const drawer2Width = 240; // Updated width for Drawer2
 
 export default function Header({ window }) {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [drawerOpen, setDrawerOpen] = React.useState(false); // State for controlling Drawer2
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false); // State for controlling Drawer2
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
